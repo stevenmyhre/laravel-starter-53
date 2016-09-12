@@ -66,6 +66,18 @@ return [
             'engine' => null,
         ],
 
+		'sqlsrv' => [
+			'driver'    => 'sqlsrv',
+			'host'      => env('DB_HOST', 'sedonasvr'),
+			'database'  => env('DB_DATABASE', 'SSS_Reports'),
+			'username'  => env('DB_USERNAME', 'SSS_Reports'),
+			'password'  => env('DB_PASSWORD', ''),
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+			'strict'    => false,
+		],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),
