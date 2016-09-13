@@ -12,5 +12,6 @@ angular.module('dashboard')
         });
     })
     .controller('HomeCtrl', function ($scope, $stateParams, Restangular) {
+        $scope.loading = true;
         $scope.todos = Restangular.all('todo').getList().$object;
     });

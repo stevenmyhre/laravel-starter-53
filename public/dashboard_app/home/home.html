@@ -1,11 +1,11 @@
 <div class="dash-home">
-    <div class="container">
+    <div class="container c-pad-top">
         <div class="col-sm-12">
             <p>Welcome.</p>
         </div>
-        <div class="col-sm-12" ng-if="todos.length">
+        <div class="col-sm-12" ng-class="{loading: todos.$isLoading}">
             <h2 class="table-header">Todo Items</h2>
-            <table class="table-list table-outlined">
+            <table class="table-list table-outlined" ng-if="todos.length">
                 <tr ng-repeat="t in todos">
                     <td>test</td>
                     <td>{{ t }}</td>

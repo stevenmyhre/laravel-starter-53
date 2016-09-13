@@ -48,6 +48,12 @@ var app = angular.module('dashboard', [
         $animateProvider.classNameFilter(/(animate)|(growl)/);
 
         RestangularProvider.setBaseUrl('/api');
+        RestangularProvider.setRestangularizePromiseInterceptor(function(promise) {
+            promise.$object.$isLoading = true;
+            promise.finally(function() {
+                delete promise.$object.$isLoading;
+            });
+        });
     })
     .constant('angularMomentConfig', {
         //preprocess: 'utc',

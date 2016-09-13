@@ -3,7 +3,7 @@
 class TodoController extends BaseApiController {
 	public function all()
 	{
-		sleep(1);
+		sleep(10);
 		return [
 			'test',
 			'another',
