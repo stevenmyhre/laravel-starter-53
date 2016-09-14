@@ -7,11 +7,11 @@ var app = angular.module('dashboard', [
     // 'ngAnimate',
     //'ngCookies',
     // 'angularMoment',
-    //'ui.bootstrap',
+    'ui.bootstrap',
     //'ui.mask',
     'angular-jwt.jwt',
     //'infinite-scroll',
-    // 'datatables',
+     'datatables',
     //'ngFileUpload',
     //'ui.select',
     //'angular-growl',
@@ -62,7 +62,7 @@ var app = angular.module('dashboard', [
     .run(function($rootScope, $state, $stateParams, $timeout, jwtHelper) {
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
-        $rootScope.autoScroll = true;
+        $rootScope.autoScroll = false;
 
         if(window.jwt_token) {
             // var data = jwtHelper.decodeToken(window.jwt_token);

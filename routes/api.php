@@ -18,3 +18,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 Route::get('/todo', 'TodoController@all');
+Route::post('/todo-dt', 'TodoController@all_datatables');

@@ -11,6 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="/vendor/datatables/media/css/jquery.dataTables.min.css">
+    {{--<link rel="stylesheet" type="text/css" href="/vendor/datatables/media/css/dataTables.bootstrap.min.css">--}}
+    <link rel="stylesheet" type="text/css" href="/vendor/angular-datatables/dist/css/angular-datatables.min.css">
     <link rel="stylesheet" href="{{ build_asset('site.css') }}">
 
     <!-- Scripts -->

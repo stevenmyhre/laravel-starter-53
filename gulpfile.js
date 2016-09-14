@@ -135,7 +135,8 @@ gulp.task('vendor', function (done) {
         // "./public/js/ui-bootstrap-custom-tpls-1.1.2.js",
         // './public/vendor/ui-select/dist/select.js'
         './public/vendor/lodash/dist/lodash.min.js',
-        './public/vendor/restangular/dist/restangular.min.js'
+        './public/vendor/restangular/dist/restangular.min.js',
+        './public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js'
 
     ];
     for(var i = 0; i < sources.length; i++) {
