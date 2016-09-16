@@ -75,7 +75,7 @@ gulp.task('dashboard_templates', function(done) {
     var options = {
         root: 'dashboard_app',
         standalone: false,
-        module: 'dashboard.templates'
+        module: 'app.templates'
     };
     gulp.src([
         './public/dashboard_app/**/*.html'
