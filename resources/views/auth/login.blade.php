@@ -9,6 +9,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
+                        <input type="hidden" name="intended_hash" id="intended_hash" value="{{ old('intended_hash') }}">
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
@@ -66,3 +67,11 @@
     </div>
 </div>
 @endsection
+@section('scripts_footer')
+    <script type="text/javascript">
+        $('#email').focus();
+        if(window.location.hash && !$('#intended_hash').val()) {
+            $('#intended_hash').val(window.location.hash);
+        }
+    </script>
+@append
